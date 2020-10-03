@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Stuff With OOP</title>
+  </head>
+
+  <body>
+    <div class="intro">
+      <h1>Hot or Cold</h1>
+      <p>My phone is missing, can you find it?</p>
+      <button>Start</button>
+    </div>
+
+    <!-- JavaScript below -->
+    <script>
+      class Animator {
+        constructor(selector) {
+          this.selector = document.querySelector(selector);
+        }
+        fadeOut(time) {
+          this.selector.style.transition = `all ${time}s ease`;
+          this.selector.style.opacity = 0;
+        }
+      }
+
+      const intro = new Animator("h1");
+      const button = new Animator("button");
+
+      intro.fadeOut(1);
+      button.fadeOut(2);
+
+
+    </script>
+  </body>
+</html>
